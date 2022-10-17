@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.Flags li{
+border: 1px solid #fff;
+margin-bottom: 10px;
+list-style-type: none;
+
+
+
+}
+.Flags li img{
+  width: 100px;
+  margin: 10px 0;
+}
