@@ -1,0 +1,35 @@
+
+.Flags{
+    border: 3px solid #fff;
+    margin-bottom: 40px;
+    list-style-type: none;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 3px 3px 3px rgba(255, 255, 255, 0.308);
+    }
+ .Flags img{
+        max-width: 100%;
+     
+    }
+    .Flags button{
+        border: 1px solid #fff;
+        color: #fff;
+        padding:5px 10px;
+         background: transparent;
+         border-radius: 5px;
+         cursor: pointer;
+         transition: .3s;
+    }
+    .Flags button:hover{
+        
+        color: #000;
+     
+         background: #fff;
+       
+    }
+h1,h2,h3,h4,h5,h6{
+        margin: 0;
+        margin-bottom: 5px;
+        font-weight: 300;
+
+    }

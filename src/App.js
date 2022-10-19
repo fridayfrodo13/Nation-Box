@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Cart from './Components/Cart/Cart'
+import Country from './Components/Country/Country'
 
 function App() {
   const [countries, setCountries] = useState([])
+  const [cart, setCart] = useState([])
   useEffect(() => {
     fetch('https://restcountries.com/v3.1/all')
       .then((res) => res.json())
@@ -12,21 +15,26 @@ function App() {
       })
       .catch((error) => console.log(error))
   }, [])
+
+  const buttonHandler = (country) => {
+    const newCart = [...cart, country]
+    setCart(newCart)
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <div className="Flags">
-          <h1>Loaded Country : {countries.length}</h1>
-          <h3>Countries Name With Flags</h3>
-          <ol className="FlagsList">
-            {countries.map((country) => (
-              <li>
-                {country.name.common} <br />{' '}
-                <img src={country.flags.png} alt="" />
-              </li>
-            ))}
-          </ol>
-        </div>
+        <h1>Loaded Country : {countries.length}</h1>
+        <Cart cart={cart}></Cart>
+        <br />
+        <h3>Countries Name With Flags</h3>
+        <br />
+        {countries.map((country) => (
+          <Country
+            country={country}
+            addButtonHandler={buttonHandler}
+            key={country.flag}
+          ></Country>
+        ))}
       </header>
     </div>
   )

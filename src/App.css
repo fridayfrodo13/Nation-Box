@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .App {
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-logo {
@@ -37,15 +39,3 @@
   }
 }
 
-.Flags li{
-border: 1px solid #fff;
-margin-bottom: 10px;
-list-style-type: none;
-
-
-
-}
-.Flags li img{
-  width: 100px;
-  margin: 10px 0;
-}
